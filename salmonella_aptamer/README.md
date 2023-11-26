@@ -8,8 +8,7 @@ This is usefull for identification of Aptamer Motifs that bind to proteins, and 
 This program runs by clustering polypeptide chains after vectorising them by using PseAAC algorithm.
 The program has two options. You can either upload a FASTA folder with protein sequences (kindly note that the program will
 return an error message if presented with sequences that contain sequences other than protein), or you can generate polypeptides,
-based on a Probability matrix installed in the program (for further information regarding the probability matrix
-check, software section https://2022.igem.wiki/iiser-mohali/software. The length of the polypeptide is a user input.
+based on a Probability matrix installed in the program. The length of the polypeptide is a user input.
 
 After clustering a FASTA file is generated containg the clustered polypetide sequences and their cluster number. 
 A picture of the clusters is also generated, to visualise the clusters.
@@ -20,7 +19,7 @@ cluster can be indentified as the cluster center that shows the least binding en
 Once the best binding cluster is identlfied the user can take the polypeptides in the best binding cluster and reculster,
 using KAMI or randomly select proteins from the cluster to find the best match.
 
-Kindly note that using the KAMI program for a low number of proteins (less than 10) will not be a very efficient 
+Kindly note that using this program for a low number of proteins (less than 10) will not be a very efficient 
 use of the program. The program works best for a large sample size and can reduce the docking requirements in such cases
 by 90%.
 
@@ -52,11 +51,4 @@ Download the Cluster centers, and the clustered file.
 Dock the cluster center sequences using Hex dock, inclueded in the software package.
 (kindly note that if you run the software using generated proteins, you will need to generate a PDB file before running the docking step)
 Select the best cluster, based on the cluster center which shows the least binding energy
-Dock random sequences in the best cluster, or re-eneter the best cluster FASTA into the KAMI program to recluster 
-
-## Authors and acknowledgment
-
-Utpal Garain <br>
-Soumadeep Saha <br>
-Kalyandeep Ghosh <br>
-Udbhas Garai <br>
+Dock random sequences in the best cluster, or re-eneter the best cluster FASTA into this program to recluster 
