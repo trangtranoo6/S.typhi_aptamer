@@ -8,7 +8,6 @@ from pseb.pseb import validatePeptide
 UPLOAD_FOLDER = './uploads'
 
 app = Flask(__name__)
-app.secret_key = "iGemProject:("
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 1000000
 
