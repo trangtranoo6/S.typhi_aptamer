@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="col-md-12 col-sm-12">
+<div class="home-info">
+	<div class="row">
+		<div class="col-sm-8">
+			<h2> Clustering completed. </h2>
+			<img src="{{ url_for('static', filename='serve/plot.png') }}" style='width:80%;'>
+		</div>
+		<div class="col-sm-4">
+			<h2> Download results : </h2>
+			  <a href="{{ url_for('static', filename='serve/center.txt') }}" download style="size:1.5em;">Cluster Centers</a>
+			  <br>
+			  <a href="{{ url_for('static', filename='serve/clusters.csv') }}" download style="size:1.5em;">Clusters and aptamers</a>
+			  <h2><a href="/">Try another</a></h2><br>
+			  <h2><a href="http://hdock.phys.hust.edu.cn/"> Try docking with hex</a></h2>
+		</div>
+	</div>
+
+</div>
+</div>
+{% endblock %}

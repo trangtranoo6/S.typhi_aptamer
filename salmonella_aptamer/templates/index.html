@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="col-md-12 col-sm-12">
+<div class="home-info">
+	<h2> Upload your proteins (in .fasta format) or generate random </h2>
+	{% with messages = get_flashed_messages() %}
+		 {% if messages %}
+			  <ul>
+		  {% for message in messages %}
+			    <li style="color:white;">{{ message }}</li>
+		  {% endfor %}
+			  </ul>
+		 {% endif %}
+	{% endwith %}
+	<br>
+        <div class="upload-form" style="background:rgba(255,255,255,0.5);padding:20px;">
+	<form method="POST" enctype="multipart/form-data" id = "form">
+	    <div class = 'row'>
+		<div class="col-sm-6">
+		   <input type="radio" name="typ" class="form-control" value="upload" checked="True"> Upload
+		   <input type="file" name="file" class="form-control" placeholder="Choose File">
+		</div>
+		<div class="col-sm-6">
+			<input type="radio" name="typ" value="sample" class="form-control" > Sample
+			<input type="text" id="num" name="num" placeholder="Number of samples" class="form-control" >
+                </div>
+	    </div>
+            <div class = 'row'>
+		<div class="col-sm-6">
+		Lambda : <input type="text" class="form-control" id="lambda" name="lambda" placeholder="Enter an integer" required = "True">
+		</div>
+		<div class="col-sm-6">
+			K-Means : <input type="text" class="form-control" id="knum" name="knum" placeholder="Enter number of clusters" required = "True">
+		</div>
+	    </div>
+	    <br>
+            <div class = 'row'>
+		<div class="col-sm-12">
+		   <input type="submit" name = "submit" class="form-control" value="Submit" form="form">
+		</div>
+	    </div>
+	</div>
+	</form>
+	</div>
+ </div>
+</div>
+{% endblock %}
